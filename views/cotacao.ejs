@@ -1,0 +1,11 @@
+<%- include('header') %>
+<div class="result">
+    <% if (err) { %>
+        Não há valores
+    <% } else { %>
+    Dólares <%=qtde%> <br/>
+    Cotação: <%=cotacao%> <br/>
+    Total em Reais: <%=val%> <br/>
+    <% } %>
+</div>
+<%- include('footer') %>
