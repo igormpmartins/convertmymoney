@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path')
 const conv = require('./lib/convert')
+const apiBCB = require('./lib/api.bcb')
 
 const app = express()
 
@@ -16,8 +17,11 @@ app.listen(3000, err => {
     }
 })
 
-app.get('/', (req, res) => {
-    res.render('home')
+app.get('/', async(req, res) => {
+    const cot = await apiBCB.getCotacao()
+    res.render('home', {
+        cotacao: cot
+    })
 })
 
 app.get('/cotacao', (req, res) => {
@@ -29,7 +33,7 @@ app.get('/cotacao', (req, res) => {
         const val = conv.convert(qtde, cotacao)
 
         res.render('cotacao', {
-            cotacao: conv.toMoney(cotacao), 
+            cotacao: conv.toQuote(cotacao), 
             qtde: conv.toMoney(qtde), 
             val: conv.toMoney(val),
             err: false
