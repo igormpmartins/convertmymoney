@@ -24,6 +24,10 @@
             "methods": [
                 "GET"
             ]
+        },
+        {
+            "src": "/public/home.validate.js",
+            "dest": "/home.validate.js"
         }
     ]
 }
