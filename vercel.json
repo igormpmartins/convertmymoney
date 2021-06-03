@@ -5,7 +5,7 @@
             "src": "index.js",
             "use": "@now/node-server",
             "config": {
-                "includeFiles": ["public/js/**"]
+                "includeFiles": ["/public/js/**", "/js/**"]
               }
         }
     ],
