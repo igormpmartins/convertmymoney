@@ -32,11 +32,5 @@
                 "GET"
             ]
         } 
-    ],
-    "functions": {
-        "public/validate.js": {
-          "memory": 3008,
-          "maxDuration": 60
-        }
-    }
+    ]
 }
