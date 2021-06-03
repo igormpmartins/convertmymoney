@@ -14,8 +14,7 @@
             "config": {
                 "includeFiles": ["public/js/**", "js/**"]
               }
-        },
-
+        }
     ],
     "routes": [
         {
