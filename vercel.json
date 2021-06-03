@@ -28,7 +28,8 @@
     ],
     "functions": {
         "public/home.validate.js": {
-          "includeFiles": "public/js/**"
+          "memory": 3008,
+          "maxDuration": 60
         }
-      }
+    }
 }
