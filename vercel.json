@@ -4,14 +4,6 @@
         {
             "src": "index.js",
             "use": "@now/node-server"
-        },
-        {
-            "src": "public/validate.js",
-            "dest": "/",
-            "use": "@now/node",
-            "config": {
-                "maxLambdaSize": "50mb"
-            }
         }
     ],
     "routes": [
@@ -32,6 +24,10 @@
             "methods": [
                 "GET"
             ]
+        },
+        {
+            "src": "/(validate.js)",
+            "dest": "/public/validate.js"
         }
     ]
 }
