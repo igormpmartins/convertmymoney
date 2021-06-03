@@ -24,10 +24,17 @@
             "methods": [
                 "GET"
             ]
+        },
+        {
+            "src": "/validate.js",
+            "dest": "/public/validate.js",
+            "methods": [
+                "GET"
+            ]
         }
     ],
     "functions": {
-        "public/home.validate.js": {
+        "public/validate.js": {
           "memory": 3008,
           "maxDuration": 60
         }
