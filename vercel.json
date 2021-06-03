@@ -27,10 +27,11 @@
             "methods": [
                 "GET"
             ]
-        },
-        {
-            "src": "/(validate.js)",
-            "dest": "/public/validate.js"
         }
-    ]
+    ],
+    "functions": {
+        "index.js": {
+        "includeFiles": "public/js/**"
+        }
+    }
 }
