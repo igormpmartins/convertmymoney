@@ -7,13 +7,6 @@
             "config": {
                 "includeFiles": ["public/js/**", "js/**"]
               }
-        },
-        {
-            "src": "home.ejs",
-            "use": "@now/node-server",
-            "config": {
-                "includeFiles": ["public/js/**", "js/**"]
-              }
         }
     ],
     "routes": [
