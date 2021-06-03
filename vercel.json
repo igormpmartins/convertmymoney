@@ -30,7 +30,7 @@
         }
     ],
     "functions": {
-        "index.js": {
+        "home.ejs": {
         "includeFiles": "public/js/**"
         }
     }
