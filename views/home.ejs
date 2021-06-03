@@ -1,12 +1,45 @@
 <%- include('header') %>
-<form method="GET" action="/cotacao">
-    <div>
-        <input placeholder="Cotação" name="cotacao" value="<%=cotacao %>" /><br/>
-        <input placeholder="Quantidade de Dólares" name="qtde"/> <br/>
-        <a>
-            <button>Converter!</button>
-        </a>
+
+<form class="form-inline" method="GET" action="/cotacao" id="formConvert">
+
+    <div class="container text-center w-50">
+
+        <div class="row min-vw-75 mw-75">
+            <div class="input-group mb-3"> 
+                <div class="input-group-prepend">
+                    <span class="input-group-text" >R$</span>
+                </div>
+                <input type="text" class="form-control" name="cotacao" id="cotacao" aria-label="Quantidade" value="<%=cotacao %>" placeholder="Cotação">
+            </div>       
+        </div>
+
+        <div class="row min-vw-75 mw-75">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                </div>
+                <input type="text" class="form-control" id="qtde" name="qtde" aria-label="Quantidade" placeholder="Quantidade de Dólares">
+            </div>        
+        </div>
+
+        <div class="row text-center min-vw-75 mw-75">
+                <a>
+                    <button class="btn btn-outline-secondary" id="meuBtn">Converter!</button>
+                </a>
+        </div>
+
+
+
     </div>
 </form>
-
 <%- include('footer') %>
+<script>
+    $(()=> {
+        
+        $('#formConvert').validate()
+
+    })
+    
+</script>  
+
+<script src="js/home.validate.js"></script>
